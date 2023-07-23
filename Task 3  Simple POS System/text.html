@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            POS System
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body bgcolor="grey">
+        <center><h1 style="align-items: center;">POS SYSTEM</h1></center>
+        <div id="container">
+        <!-- Add customer and Product -->
+        <div id="add-cpd">
+            <div id="add-pd">
+                <h3>Add Products</h3>
+                <table id="pd" border="0">
+                    <tr>
+                        <td>
+                            <input type="text" id="pd-name" placeholder="Enter product name">
+                        </td>
+                        <td>
+                            <input type="number" id="pd-price" placeholder="Enter product price" >
+                        </td>
+                        <td>
+                            <input type="button" value="Add" id="pd-add-btn">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="add-cu">
+                <h3>Add Customers</h3>
+                <table id="cu">
+                    <tr>
+                        <td>
+                            <input type="text" id="cu-name" placeholder="Enter Customer name">
+                        </td>
+                        <td>
+                            <input type="button" value="Add" id="cu-add-btn">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Show Product and Customer List  -->
+        <div id="show-cpd">
+            <div id="show-pd">
+                <h3>Products Details</h3>
+                <table id="pd-d" border="1">
+                    <thead>
+                    <tr>
+                        <th>
+                            Product
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>
+                            Edit
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                </tbody>
+                </table>
+            </div>
+            <div id="show-cu">
+                <h3>Customers Details</h3>
+                <table id="cu-d" border="0">
+                    <thead>
+                    <tr>
+                        <th>
+                            Customer Name
+                        </th>
+                        <th>
+                            Remove
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
+            </div>
+        </div>
+
+         <!-- add Order and Show Order Details  -->
+         <div id="show-ord">
+            <div id="ord-add">
+                <h3>Order</h3>
+                <table id="ord-add" border="0">
+                    <tr>
+                        <td>
+                            <b>Select Customer :</b>
+                        </td>
+                        <td>
+                            <select id="c-select" >
+                                <!-- <option value="hh">hh</option> -->
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Select Product :</b>
+                        </td>
+                        <td>
+                            <select id="pd-select" >
+                                <!-- <option value="hh">hh</option> -->
+                            </select>
+                        </td>
+                        <td>
+                            <input type="button" id="add-to-cart" value="Add to Cart">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Cart -->
+            <div id="show-cart">
+                <h3>Cart</h3>
+                <table id="cart" border="0">
+                    <thead>
+                    <tr>
+                        <th>
+                            Product
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+                </table>
+                Total:  <input type="text" id="totoal" readonly>
+                <input type="button" value="purachase">
+            </div>
+        </div>
+    </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

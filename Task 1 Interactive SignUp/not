@@ -1,0 +1,16 @@
+$( ".gender" ).mouseleave(function() {
+
+    if ($('input[value="male"]:checked').length || $('input[value="female"]:checked').length) {
+        
+        $('#show_error_gender').html('')
+        gn=1
+        return true;
+     
+    }
+    else{
+        $('#show_error_gender').html('Please select one')
+        return false;
+    }
+
+    
+});

@@ -1,0 +1,69 @@
+$(document).ready(function() {
+  var products = []; // Array to store the products
+
+  $('#addBtn').click(function() {
+    var product = $('#product').val();
+    var price = $('#price').val();
+
+    if (product && price) {
+      var item = {
+        product: product,
+        price: price
+      };
+
+      products.push(item);
+      displayTable();
+      updateSelectOptions();
+    } else {
+      console.log('Please enter a product and price.');
+    }
+  });
+
+  $('#productTable').on('click', 'button.deleteBtn', function() {
+    var row = $(this).closest('tr');
+    var product = row.find('td:first-child').text();
+
+    // Remove the product from the products array
+    products = products.filter(function(item) {
+      return item.product !== product;
+    });
+
+    // Remove the row from the table
+    row.remove();
+
+    updateSelectOptions();
+  });
+
+  function displayTable() {
+    var tableBody = $('#productTable tbody');
+    tableBody.empty();
+
+    for (var i = 0; i < products.length; i++) {
+      var product = products[i].product;
+      var price = products[i].price;
+
+      var row = $('<tr>');
+      var productCell = $('<td>').text(product);
+      var priceCell = $('<td>').text(price);
+      var buttonCell = $('<td>');
+      var deleteButton = $('<button>').text('X').addClass('deleteBtn');
+
+      buttonCell.append(deleteButton);
+      row.append(productCell, priceCell, buttonCell);
+      tableBody.append(row);
+    }
+  }
+
+  function updateSelectOptions() {
+    var selectOptions = $('#productOptions');
+    selectOptions.empty();
+
+    for (var i = 0; i < products.length; i++) {
+      var product = products[i].product;
+      var option = $('<option>').text(product);
+
+      selectOptions.append(option);
+    }
+  }
+});
+

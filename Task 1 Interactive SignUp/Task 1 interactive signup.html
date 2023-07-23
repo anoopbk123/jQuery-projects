@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>
+            SignUp
+        </title>
+        <link rel="stylesheet" href="modal.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/86290d2fc7.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <p class="p1" ><center>
+            <h2 class="h21">SignUp</h2></center></p>
+        <form id="signup-form">
+            <table border="0">
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <input type="text" name="name" id="name" >
+                    </td>        
+                </tr>
+                <tr><td></td>
+                    <td WIDTH=200><h5 id="namecheck">
+                    **Username is missing
+                    </h5></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="email" id="email" name="email" >
+                    </td>
+                </tr>
+                <tr><td></td>
+                    <td WIDTH=200><h5 id="emailvalid">
+                     **Your email must be a valid email
+                    </t5></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <textarea name="address" id="address" ></textarea >
+                    </td>
+                </tr>
+                <tr><td></td>
+                    <td WIDTH=200><h5 id="addresscheck">
+                     **Address length must be at least 8 characters.
+                    </t5></td>
+                </tr>
+                <tr>
+                    <td>Enter Date of Birth</td>
+                    <td><input type="date" name="dob" id="dob" ></td>
+                </tr>
+                <tr>
+                    <td>
+                        Age
+                    </td>
+                    <td>
+                        <input type="text" name="age" id="age" readonly>
+                    </td>
+                </tr>
+                <tr><td></td>
+                    <td WIDTH=200><h5 id="agevalid">
+                     **Your age must be between 18 and 100 to signup
+                    </t5></td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" value="Male" class="gender" > Male
+                        <input type="radio" name="gender" value="Female" class="gender"> Female
+                        <input type="radio" name="gender" value="Other" class="gender"> other
+                    </td>
+                </tr>
+                <tr><td></td>
+                    <td WIDTH=200><h5 id="gendervalid">
+                     **please select one gender
+                    </t5></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" id="password" > </td>
+                        <td class="eye-icon" id="eyeicon" >
+                            <i class="fa-sharp fa-solid fa-eye" id="pshow" style="margin-left: -80px;"></i>
+                            <i class="fa-solid fa-eye-slash" id="phide" style="margin-left: -80px;"></i></td> 
+                </tr>
+                <tr><td></td>
+                    <td WIDTH=200><h5 id="passwordcheck">
+                    **password is missing
+                    </h5></td>
+                </tr>
+                <tr>
+                    <td>Confirm password</td>
+                    <td>
+                    <input type="password" name="cpassword" id="cpassword" >
+                    </td>
+                    <td class="ceye-icon" id="ceyeicon" >
+                        <i class="fa-sharp fa-solid fa-eye" id="cshow" style="margin-left: -80px;"></i>
+                        <i class="fa-solid fa-eye-slash" id="chide" style="margin-left: -80px;"></i></td> 
+                </tr>
+                <tr><td></td>
+                    <td WIDTH=200><h5 id="cpasswordcheck">
+                    **password is missing
+                    </h5></td>
+                </tr>
+            </table>
+            <center>
+            <input type="submit" value="SignUp" id="submit" name="submit" >
+            </center>
+        </form>
+        <!-- Button to trigger modal -->
+                    
+        <!-- The Modal -->
+        <div id="modalDialog" class="modal">
+            <div class="modal-content animate-top">
+                <div class="modal-header">
+                    <h5 class="modal-title">Error</h5>
+                    <button type="button" class="close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="mod">Please fill all the fields without errors to login</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js">    
+        </script>
+    </body>
+</html>

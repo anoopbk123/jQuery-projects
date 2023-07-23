@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pos System</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="row mt-3">
+        <div class="col-md-3 p-5 addproduct">
+            
+            <form action="" id="add-product">
+                <h3>
+                    Add Product and Price
+                </h3>
+                <input type="text" id="product-name" placeholder="Enter product name">
+                <input type="number" id="product-price" placeholder="Enter product price" min="0"><br>
+                <input type="submit" value="add product" id="addpd">
+
+            </form>
+            <div class="view-products">
+                <table id="viewpd"></table>
+                
+            </div>
+        </div>
+
+        <div class="col-md-3 p-5 add-user">
+
+            <form action="" id="add-user">
+                <h3>
+                    Add Customer
+                </h3>
+                <input type="text" id="user-name" placeholder="Enter Customer name">
+                <input type="submit" value="Add Customer">
+
+            </form>
+            <div class="view-user">
+                
+            </div>
+        </div>
+        
+        <div class="col-md-6 order p-5">
+            
+                <form action="" id="order-form">
+                    <h3>
+                        Order form
+                    </h3>
+                    <select name="user" id="select-user">
+                        <option value="">Select Customer</option>
+                    </select>
+                    <div id="add-button"><span>+</span></div>
+                    <div class="show-products mt-3" id="show-products">
+                       
+    
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md">Total </div>
+                        <div class="col-md">: </div>
+
+                        <div class="col-md" id="cart-total">$0</div>
+                    </div>
+                    <div>
+                        <!-- <a class="btn" id="find-total">find total</a> -->
+                        <!-- <a class="btn " id="check-out" href="./invoice.html">check out</a> -->
+                        <input type="submit" value="check-out">
+                    </div>
+                    
+                </form>
+                
+        </div>
+    </div>
+   <script src="./pos.js"></script>
+    
+</body>
+</html>
